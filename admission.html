@@ -1,85 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Admission Form</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Admission Form</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-<h1>School Admission Form</h1>
+<h1>ABC Public School</h1>
+<p>School Admission Form</p>
 </header>
 
 <nav>
 <a href="index.html">Home</a>
+<a href="admission.html">Admission</a>
 <a href="about.html">About</a>
 </nav>
 
-
 <div class="container">
+
+<h2>Student Admission Form</h2>
 
 <form>
 
 <label>Student Name</label>
-<input type="text" placeholder="Enter Name">
-
+<input type="text" placeholder="Enter Full Name" required>
 
 <label>Date of Birth</label>
-<input type="date">
+<input type="date" required>
 
+<label>Gender</label><br><br>
 
-<label>Email</label>
-<input type="email">
-
-
-<label>Mobile Number</label>
-<input type="tel">
-
-
-<label>Gender</label><br>
-
-<input type="radio" name="gender"> Male
+<input type="radio" name="gender" required> Male
 <input type="radio" name="gender"> Female
+<input type="radio" name="gender"> Other
 
 <br><br>
 
+<label>Blood Group</label>
+<select required>
+<option>Select Blood Group</option>
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>AB+</option>
+<option>AB-</option>
+<option>O+</option>
+<option>O-</option>
+</select>
 
 <label>Class Applying For</label>
 
-<select>
+<select required>
 <option>Select Class</option>
 <option>LKG</option>
 <option>UKG</option>
 <option>Class 1</option>
+<option>Class 2</option>
+<option>Class 3</option>
+<option>Class 4</option>
+<option>Class 5</option>
+<option>Class 6</option>
+<option>Class 7</option>
+<option>Class 8</option>
+<option>Class 9</option>
 <option>Class 10</option>
+<option>Class 11</option>
 <option>Class 12</option>
 </select>
 
+<label>Previous School</label>
+<input type="text" placeholder="Previous School Name">
 
-<label>Address</label>
+<label>Parent / Guardian Name</label>
+<input type="text" placeholder="Parent Name" required>
 
-<textarea rows="4"></textarea>
+<label>Parent Mobile Number</label>
+<input type="tel" placeholder="10-digit Mobile Number" required>
 
+<label>Email Address</label>
+<input type="email" placeholder="example@email.com" required>
 
-<label>Upload Certificate</label>
+<label>Residential Address</label>
+<textarea rows="4" placeholder="Enter Address"></textarea>
 
+<label>Upload Student Photo</label>
+<input type="file" accept="image/*">
+
+<label>Upload Birth Certificate / Transfer Certificate</label>
 <input type="file">
 
+<br>
 
-<button type="submit">Submit</button>
+<input type="checkbox" required>
+I confirm that the above information is true.
 
-<button type="reset">Reset</button>
+<br><br>
+
+<button type="submit">Submit Application</button>
+
+<button type="reset">Reset Form</button>
 
 </form>
 
 </div>
 
-
 <footer>
-© 2026 ABC Public School
+<p>© 2026 ABC Public School | All Rights Reserved</p>
 </footer>
-
 
 </body>
 </html>

@@ -2,13 +2,15 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
 }
 
 body{
     background:#eef5ff;
+    color:#333;
 }
 
+/* Header */
 header{
     background:#0d6efd;
     color:white;
@@ -16,73 +18,247 @@ header{
     padding:20px;
 }
 
+header h1{
+    color:white;
+    margin-bottom:10px;
+}
+
+/* Navigation */
 nav{
     background:#084298;
     text-align:center;
-    padding:12px;
+    padding:15px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
     margin:15px;
+    font-weight:bold;
+    transition:0.3s;
 }
 
+nav a:hover{
+    color:#ffd54f;
+}
+
+/* Hero Section */
+.hero{
+    position:relative;
+}
+
+.hero img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+.hero-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(0,0,0,0.55);
+    color:white;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.hero-text h2{
+    color:white;
+    margin-bottom:15px;
+}
+
+.hero-text p{
+    color:white;
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+/* Main Container */
 .container{
-    width:80%;
-    margin:30px auto;
+    width:85%;
+    margin:40px auto;
     background:white;
     padding:30px;
     border-radius:10px;
-    box-shadow:0 0 10px gray;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
 }
 
-h1,h2{
+.container h2{
     color:#0d6efd;
     text-align:center;
     margin-bottom:20px;
 }
 
-p{
-    line-height:1.6;
+.container p{
+    text-align:center;
+    line-height:1.8;
 }
 
-input,select,textarea{
+/* Facilities */
+.facilities{
+    padding:40px 10%;
+    text-align:center;
+}
+
+.facilities h2{
+    color:#0d6efd;
+    margin-bottom:30px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:300px;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
     width:100%;
-    padding:10px;
-    margin:10px 0;
+    height:200px;
+    object-fit:cover;
 }
 
-button{
+.card h3{
+    color:#0d6efd;
+    margin:15px;
+}
+
+.card p{
+    padding:0 15px 20px;
+}
+
+/* Gallery */
+#gallery{
+    padding:40px 10%;
+    text-align:center;
+}
+
+#gallery h2{
+    color:#0d6efd;
+    margin-bottom:30px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* Contact */
+#contact{
+    width:85%;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+#contact h2{
+    color:#0d6efd;
+    margin-bottom:20px;
+}
+
+#contact p{
+    margin:10px 0;
+    font-size:17px;
+}
+
+/* Forms */
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+textarea{
+    resize:vertical;
+}
+
+button,
+input[type="submit"]{
     background:#0d6efd;
     color:white;
-    padding:10px 20px;
+    padding:12px 25px;
     border:none;
     border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:16px;
 }
 
-.box{
-    background:white;
-    padding:20px;
-    margin:20px;
-    border-radius:10px;
-    box-shadow:0 0 8px gray;
+button:hover,
+input[type="submit"]:hover{
+    background:#084298;
 }
 
+/* Footer */
 footer{
     background:#0d6efd;
     color:white;
     text-align:center;
-    padding:15px;
+    padding:20px;
+    margin-top:40px;
 }
 
-@media(max-width:600px){
-    .container{
-        width:95%;
-    }
+/* Responsive */
+@media(max-width:768px){
 
     nav a{
         display:block;
         margin:10px;
+    }
+
+    .container,
+    #contact{
+        width:95%;
+    }
+
+    .hero img{
+        height:300px;
+    }
+
+    .hero-text{
+        width:90%;
+        padding:20px;
+    }
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
     }
 }
